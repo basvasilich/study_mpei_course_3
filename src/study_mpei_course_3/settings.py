@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zcwg)-v)_usi-nzjb$iq16&$7ex1*i4i6uu_^0fl03ddbc*w*!'
+SECRET_KEY = 'django-insecure-@mega3$cie*#%y5@08-2+f+5v&s!$i+t15fr346xrm5zbfq*&g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'flat',
+    'courier.apps.CourierConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,8 +56,7 @@ ROOT_URLCONF = 'study_mpei_course_3.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,7 +78,11 @@ WSGI_APPLICATION = 'study_mpei_course_3.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'dbn8mj6ko0sr1u',
+        'USER': 'ijxawwdzxyfllp',
+        'PASSWORD': '6096c7ae22456b166123a892f4754c7fb40afc0a22e17a2fef0467a638a774f3',
+        'HOST': 'ec2-34-242-89-204.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -104,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
