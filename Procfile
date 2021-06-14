@@ -1,0 +1,1 @@
+web: gunicorn study_mpei_course_3.wsgi

@@ -100,17 +100,26 @@ class Depot(models.Model):
 
 
 class Route(models.Model):
+    # поле госномер ТС
     vehicle_number = models.ForeignKey(Vehicle, on_delete=models.DO_NOTHING, help_text='Машина')
+    # связь многие ко многим с моделья Заказов
     orders = models.ManyToManyField(Order)
+    # связь многие ко многим с моделья Складов
     depots = models.ManyToManyField(Depot)
+    # внешний ключ к модели Сотрудник
     courier = models.ForeignKey(Employee, on_delete=models.DO_NOTHING, help_text='Курьер', related_name='+')
+    # внешний ключ к модели Сотрудник
     logistician = models.ForeignKey(Employee, on_delete=models.DO_NOTHING, help_text='Логист', related_name='+')
+    # поле название
     title = models.CharField(blank=True, max_length=200, help_text='Комментарий к маршруту')
+    # поле дата специального типа
     date = models.DateField(blank=False, help_text='Дата маршрута')
 
+    # переопределение методаприведения к строке для отображения
     def __str__(self):
         return self.title
 
+    # переопределение сабкласса метаинформации
     class Meta:
         verbose_name = "Маршрут"
         verbose_name_plural = "Маршруты"
