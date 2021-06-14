@@ -106,7 +106,7 @@ class Route(models.Model):
     courier = models.ForeignKey(Employee, on_delete=models.DO_NOTHING, help_text='Курьер', related_name='+')
     logistician = models.ForeignKey(Employee, on_delete=models.DO_NOTHING, help_text='Логист', related_name='+')
     title = models.CharField(blank=True, max_length=200, help_text='Комментарий к маршруту')
-    date = models.DateField(auto_now_add=True, blank=False, help_text='Дата маршрута')
+    date = models.DateField(blank=False, help_text='Дата маршрута')
 
     def __str__(self):
         return self.title

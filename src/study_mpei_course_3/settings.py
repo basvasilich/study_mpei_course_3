@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'flat',
     'courier.apps.CourierConfig',
     'django.contrib.admin',
     'django.contrib.auth',
